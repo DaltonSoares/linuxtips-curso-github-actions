@@ -1,4 +1,4 @@
-name: Primeio Workflow Linuxtips
+name: Vendo arquivos compartilhados entre Steps
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  giropops:
+  entre-steps:
     runs-on: ubuntu-latest
     steps:
       - name: Confere versao do Ubuntu
