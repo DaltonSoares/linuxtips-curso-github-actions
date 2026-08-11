@@ -2,7 +2,8 @@ name: Primeio Workflow Linuxtips
 
 on:
   push:
-    - main
+    branches:
+      - main
 
 jobs:
   giropops:
