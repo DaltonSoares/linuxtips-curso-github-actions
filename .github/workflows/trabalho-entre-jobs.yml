@@ -36,7 +36,7 @@ jobs:
         run: ls -lha
 
       - name: Acessa arquivo mensagem
-        run: mv strigus/mensagem.txt . && rm -rf ./strigus
+        run: mv ${{ github.workspace }}/mensagem.txt . && rm -rf ./strigus
 
       - name: Ver o conteudo do diretorio
         run: ls -lha
