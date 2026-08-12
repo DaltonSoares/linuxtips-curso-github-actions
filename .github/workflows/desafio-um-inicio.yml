@@ -27,7 +27,7 @@ jobs:
         run: docker ${{ env.IMAGE_NAME }} ls
 
       - name: Docker Scout
-        use:  docker/scout-action@v1
+        uses:  docker/scout-action@v1
         with:
           command: quickview
           image: ${{ env.IMAGE_NAME }}
