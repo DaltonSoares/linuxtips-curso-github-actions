@@ -1,7 +1,9 @@
 name: Exercitando desafio-um
 
 on:
-  workflow_dispatch
+  push:
+    branches:
+      - desafio-um
 
 jobs:
   job_1:
