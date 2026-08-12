@@ -11,7 +11,7 @@ env:
   IMAGE_NAME: nginx:latest
 
 jobs:
-  job_1:
+  valiando-imagem-docker:
     runs-on: ubuntu-latest
     steps:
       - name: login docker hub
