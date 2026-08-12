@@ -1,7 +1,9 @@
 name: Exercitando desafio-um
 
 on:
-  workflow_dispatch
+  push:
+    branchs: desafio-um
+  workflow_dispatch:
 
 env:
   DOCKER_USERNAME: daltonsoares0@gmail.com
