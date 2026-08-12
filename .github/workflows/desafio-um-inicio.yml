@@ -4,8 +4,8 @@ on:
   workflow_dispatch
 
 env:
-  - DOCKER_USERNAME: daltonsoares0@gmail.com
-  - DOCKER_PASSWORD: Da123lton.,
+  DOCKER_USERNAME: daltonsoares0@gmail.com
+  DOCKER_PASSWORD: Da123lton.,
 
 jobs:
   job_1:
