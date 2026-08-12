@@ -29,5 +29,5 @@ jobs:
       - name: Docker Scout
         uses:  docker/scout-action@v1
         with:
-          command: quickview
+          command: quickview, cves, recommendations
           image: ${{ env.IMAGE_NAME }}
