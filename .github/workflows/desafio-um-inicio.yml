@@ -1,16 +1,27 @@
 name: Exercitando desafio-um
 
 on:
-  push:
-    branches:
-      - desafio-um
+  workflow_dispatch
+
+env:
+  - DOCKER_USERNAME: daltonsoares0@gmail.com
+  - DOCKER_PASSWORD: Da123lton.,
 
 jobs:
   job_1:
     runs-on: ubuntu-latest
     steps:
-      - name: baixando imagem docker
-        run: docker pull nginx:latest
+      - name: login docker hub
+        uses: docker/login-action@v4
+        with:
+          username: ${{ env.DOCKER_USERNAME }}
+          password: ${{ env.DOCKER_PASSWORD }}
 
-      - name: listando imagens disponiveis
-        run: docker image ls
+##      - name: baixando imagem docker
+##        run: docker pull nginx:latest
+
+##      - name: listando imagens disponiveis
+##        run: docker image ls
+
+##      - name: executando docker scout na imagem
+##        use: 
