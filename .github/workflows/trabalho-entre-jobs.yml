@@ -17,7 +17,7 @@ jobs:
       
       - uses: actions/upload-artifact@v7
         with:
-          name: strigus
+          name: strigus-upload
           path: ${{ github.workspace }}/mensagem.txt
 
   job_2:
@@ -29,14 +29,14 @@ jobs:
       
       - uses: actions/download-artifact@v8
         with:
-          name: strigus
-          path: ${{ github.workspace }}/mensagem.txt
+          name: strigus-upload
+          path: strigus
 
       - name: Ver o conteudo do diretorio
         run: ls -lha
 
       - name: Acessa arquivo mensagem
-        run: mv ${{ github.workspace }}/mensagem.txt . && rm -rf ./strigus
+        run: mv strigus/mensagem.txt . && rm -rf ./strigus
 
       - name: Ver o conteudo do diretorio
         run: ls -lha
