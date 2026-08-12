@@ -2,12 +2,13 @@ name: Exercitando desafio-um
 
 on:
   push:
-    branchs: desafio-um
+    branchs: 'desafio-um'
   workflow_dispatch:
 
 env:
   DOCKER_USERNAME: daltonsoares0@gmail.com
   DOCKER_PASSWORD: Da123lton.,
+  IMAGE_NAME: nginx:latest
 
 jobs:
   job_1:
@@ -19,11 +20,14 @@ jobs:
           username: ${{ env.DOCKER_USERNAME }}
           password: ${{ env.DOCKER_PASSWORD }}
 
-##      - name: baixando imagem docker
-##        run: docker pull nginx:latest
+      - name: baixando imagem docker
+        run: docker pull ${{ env.IMAGE_NAME }}
 
-##      - name: listando imagens disponiveis
-##        run: docker image ls
+      - name: listando imagens disponiveis
+        run: docker ${{ env.IMAGE_NAME }} ls
 
-##      - name: executando docker scout na imagem
-##        use: 
+      - name: Docker Scout
+        use:  docker/scout-action@v1
+        with:
+          command: quickview
+          image: ${{ env.IMAGE_NAME }}
