@@ -24,7 +24,7 @@ jobs:
         run: docker pull ${{ env.IMAGE_NAME }}
 
       - name: listando imagens disponiveis
-        run: docker image ls | grep ${{ env.IMAGE_NAME }}
+        run: docker image ls
 
       - name: Docker Scout
         uses:  docker/scout-action@v1
