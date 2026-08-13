@@ -7,3 +7,10 @@ DESAFIO 1:
 
     Tem um workflow compartilhado do proprio docker que e o scout-cli. Sera usado como um actions dentro do workflow para mostrar um relatorio das vulnerabilidades.
 
+
+    DUVIDAS:
+        eu usei:
+            docker pull ${{ inputs.IMAGE_NAME }}
+        professor usou:
+            {{ github.event.inputs.validaImagemDocker }}
+

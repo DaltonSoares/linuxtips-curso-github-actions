@@ -5,8 +5,8 @@ on:
     inputs:
       IMAGE_NAME:
         description: 'Informe a imagem e tag - exemplo: nginx:latest'
-        default: 'alibaba:1.0'
-        required: true
+        required: false
+        default: 'ngix:latest'
         type: string    
 
 env:
@@ -16,6 +16,7 @@ env:
 jobs:
   valiando-imagem-docker:
     runs-on: ubuntu-latest
+    
     steps:
       - name: login docker hub
         uses: docker/login-action@v4
