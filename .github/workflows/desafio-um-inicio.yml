@@ -1,33 +1,3 @@
 name: Exercitando desafio-um
 
-on:
-  push:
-    branches: 'desafio-um'
-  workflow_dispatch:
-
-env:
-  DOCKER_USERNAME: daltonsoares0@gmail.com
-  DOCKER_PASSWORD: Da123lton.,
-  IMAGE_NAME: nginx:latest
-
-jobs:
-  valiando-imagem-docker:
-    runs-on: ubuntu-latest
-    steps:
-      - name: login docker hub
-        uses: docker/login-action@v4
-        with:
-          username: ${{ env.DOCKER_USERNAME }}
-          password: ${{ env.DOCKER_PASSWORD }}
-
-      - name: baixando imagem docker
-        run: docker pull ${{ env.IMAGE_NAME }}
-
-      - name: listando imagens disponiveis
-        run: docker image ls
-
-      - name: Docker Scout
-        uses:  docker/scout-action@v1
-        with:
-          command: quickview, cves, recommendations
-          image: ${{ env.IMAGE_NAME }}
+# O arquivo desafio-um-inicio.yml completo esta disponivel apenas na branch desafio-um.
