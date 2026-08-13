@@ -2,6 +2,12 @@ name: Exercitando desafio-um
 
 on:
   workflow_dispatch:
+    inputs:
+      IMAGE_NAME:
+        description: 'Informe a imagem e tag - exemplo: nginx:latest'
+        default: 'alibaba:1.0'
+        required: true
+        type: string    
 
 env:
   DOCKER_USERNAME: daltonsoares0@gmail.com
