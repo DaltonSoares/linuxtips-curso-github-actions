@@ -1,8 +1,6 @@
 name: Exercitando desafio-um
 
 on:
-  push:
-    branches: 'desafio-um'
   workflow_dispatch:
 
 env:
