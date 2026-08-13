@@ -39,6 +39,6 @@ jobs:
       - name: Scan com o Docker Scout
         uses:  docker/scout-action@v1
         with:
-          #command: quickview, cves, recommendations
+          command: quickview, cves, recommendations
           image: ${{ github.event.inputs.validaImagemDocker }}
           only-severities: critical, high
