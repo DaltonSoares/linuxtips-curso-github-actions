@@ -9,9 +9,9 @@ on:
         default: 'nginx:latest'
         type: string    
 
-env:
-  DOCKER_USERNAME: daltonsoares0@gmail.com
-  DOCKER_PASSWORD: Da123lton.,
+#env:
+#  DOCKER_USERNAME: daltonsoares0@gmail.com
+#  DOCKER_PASSWORD: Da123lton.,
 
 jobs:
   pipeline-seguranca:
