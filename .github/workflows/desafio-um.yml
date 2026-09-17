@@ -8,10 +8,11 @@ on:
         required: false
         default: 'ngix:latest'
         type: string    
-
+# Com o usuario e senha abaixo nao funcionara o workflow porque no step de login faz 
+# referencia a essas variaveis.
 env:
-  DOCKER_USERNAME: daltonsoares0@gmail.com
-  DOCKER_PASSWORD: Da123lton.,
+  DOCKER_USERNAME: ***
+  DOCKER_PASSWORD: ***
 
 jobs:
   valiando-imagem-docker:
