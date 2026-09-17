@@ -8,7 +8,8 @@ on:
         required: false
         default: 'ngix:latest'
         type: string    
-
+# Com o usuario e senha abaixo nao funcionara o workflow porque no step de login faz 
+# referencia a essas variaveis.
 env:
   DOCKER_USERNAME: ***
   DOCKER_PASSWORD: ***
