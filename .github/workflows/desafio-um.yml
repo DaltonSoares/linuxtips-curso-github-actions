@@ -10,8 +10,8 @@ on:
         type: string    
 
 env:
-  DOCKER_USERNAME: daltonsoares0@gmail.com
-  DOCKER_PASSWORD: Da123lton.,
+  DOCKER_USERNAME: ***
+  DOCKER_PASSWORD: ***
 
 jobs:
   valiando-imagem-docker:
